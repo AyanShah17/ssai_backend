@@ -31,7 +31,7 @@ def create_app() -> FastAPI:
 
 
     @app.get("/")
-    def root:
+    def root():
         return {"message": "Hello World"}
     
     @app_.get("/redoc", include_in_schema=False)
