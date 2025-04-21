@@ -28,11 +28,6 @@ def create_app() -> FastAPI:
     allow_headers=["*"],
 )
     init_routers(app_=app_)
-
-
-    @app.get("/")
-    def root():
-        return {"message": "Hello World"}
     
     @app_.get("/redoc", include_in_schema=False)
     async def custom_redoc_html():
